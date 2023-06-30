@@ -12,8 +12,6 @@ tail_includes:
 {% include lang.html %}
 
 <h1 data-toc-skip>{{ page.title }}</h1>
-<style src='../_include/all.min.css'></style>
-<style src='../_include/bootstrap.min.css'></style>
 <div class="post-meta text-muted">
     <!-- published date -->
     <span>
@@ -140,6 +138,7 @@ tail_includes:
     </div>
 
     {% include post-sharing.html lang=lang %}
+    <script href="{ '/assets/js/all.js'  | relative_url }"></script>
 
   </div><!-- .post-tail-bottom -->
 

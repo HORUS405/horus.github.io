@@ -1,6 +1,7 @@
-<!-- The Head -->
+  <!-- The Head -->
 
 <head>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
@@ -56,6 +57,7 @@
       <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
     {% endfor %}
 
+
     <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
   {% endif %}
 
@@ -69,23 +71,27 @@
   {% endif %}
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].bootstrap.css | relative_url}}">
+
+  <link rel="stylesheet" href='{{ "/assets/css/bootstrap.min.css" | relative_url }}'>
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ site.data.origin[type].fontawesome.css | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/all.min.css ' | relative_url }}">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/css/tocbot.min.css' | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
     <!-- Manific Popup -->
-    <link rel="stylesheet" href="{{ site.data.origin[type].magnific-popup.css | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/css/magnific-popup.min.css' | relative_url }}">
   {% endif %}
 
-  <!-- JavaScript -->
+  <!-- JavaScript --> 
 
   {% unless site.theme_mode %}
     {% include mode-toggle.html %}
@@ -93,3 +99,14 @@
 
   {% include metadata-hook.html %}
 </head>
+<script href="{ '/assets/js/all.js'  | relative_url }"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8NWF3QPB4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K8NWF3QPB4');
+</script>
+

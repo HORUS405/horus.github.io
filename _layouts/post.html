@@ -12,7 +12,8 @@ tail_includes:
 {% include lang.html %}
 
 <h1 data-toc-skip>{{ page.title }}</h1>
-
+<style src='../_include/all.min.css'></style>
+<style src='../_include/bootstrap.min.css'></style>
 <div class="post-meta text-muted">
     <!-- published date -->
     <span>
@@ -83,7 +84,7 @@ tail_includes:
   {{ content }}
 </div>
 <hr>
-
+{% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -94,7 +95,7 @@ tail_includes:
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+{% endif %}
 <div class="post-tail-wrapper text-muted">
 
   <!-- categories -->
@@ -143,14 +144,3 @@ tail_includes:
   </div><!-- .post-tail-bottom -->
 
 </div><!-- div.post-tail-wrapper -->
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8NWF3QPB4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K8NWF3QPB4');
-</script>

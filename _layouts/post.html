@@ -77,10 +77,17 @@ tail_includes:
   </div> <!-- .d-flex -->
 
 </div> <!-- .post-meta -->
+{%- if page.lang == 'ar' -%}   
+<div class="post-content" data-is-touch="false" dir="rtl">
 
-<div class="post-content">
   {{ content }}
 </div>
+{%- else -%}
+<div class="post-content">
+  
+  {{ content }}
+</div>
+{%- endif -%}
 <hr>
 {% if page.comments %}
 <div id="disqus_thread"></div>

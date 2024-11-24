@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-published: false
+published: true
 title: What is PE ?
 author: horus
 categories:
@@ -67,4 +67,4 @@ lang: ar
 
 
 ### Conclusion : 
-مقال صغير شرحنا فيه ايه هو ال PE بأختصار و بسرعة 
+مقال صغير شرحنا فيه ايه هو ال PE بأختصار و بسرعة
